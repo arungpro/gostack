@@ -16,17 +16,17 @@
         <form action="{% url "search" %}" method="get">
             {% csrf_token %}
             <div class="goSearchbar">
-                <input type="text" class="searchInput" value="{{ keywords }}" name="q" id="keywords" />
+                <input type="text" class="searchInput" value="{{ keywords }}" name="q" id="keywords" placeholder="  Serach for Q & A" />
                 <input type="submit" name="Submit" value="{% trans "search" %}" class="searchBtn" />
             </div>
         </form> 
       </div>
       <div class="goReg">
-          <div>
+          <div class="goRegLink">
           {% loadregistry header_links %}{% endloadregistry %}
           </div>
-          <div>
-              <a id="nav_ask" href="{% url "ask" %}" class="special">{% trans "ask a question" %}</a>
+          <div class="askquestionBtn">
+              <a id="nav_ask" href="{% url "ask" %}" class="special">{% trans "Ask a question" %}</a>
           </div>
       </div>
 

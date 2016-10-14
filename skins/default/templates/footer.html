@@ -1,19 +1,57 @@
 {% load extra_tags ui_registry i18n %}
 
 
-<div>
-    <div class="footerLinks" >
-        {% loadregistry footer_links %}<span class="link-separator"> |</span>{% endloadregistry %}
-    </div>
-  <p>
-     <a href="https://bitnami.com/stack/osqa" target="_blank" title="OSQA {{ settings.OSQA_VERSION }} ({{ settings.VCS_REVISION }})">
-        powered by Bitnami OSQA
-     </a>
-  </p>
-</div>
- <div id="licenseLogo">
-  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
-            <img src="{% media  "/media/images/by-sa-88x31.png" %}" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
-  </a>
- </div>
+<div class="footerWaper">
 
+  <ul class="footerLinks">
+    <li class="subTitle">Our Products</li>
+    <li><a href="/flight-schedule/">Flight Schedule</a></li>
+    <li><a href="/flights/city-to-city-airlines/">City Airline Routes</a></li>
+    <li><a href="/international-flights/">International Flights</a></li>
+    <li><a href="/hotels-international/">International Hotels</a></li>
+    <li><a href="/bus/">Bus Booking</a></li>
+    <li><a href="/airlines/">Domestic Airlines</a></li>
+    <li><a href="/hotels/india/">Hotels in India</a></li>
+    <li><a href="/hotels/">Hotel Booking</a></li>
+  </ul>
+
+  <ul class="footerLinks">
+      <li class="subTitle">Company</li>
+      <li><a href="/aboutus/">About Us</a></li>
+      <li><a href="/faqs/">FAQs</a></li>
+      <li><a href="/info/terms-and-conditions/">Terms &amp; Conditions</a></li>
+      <li><a href="/info/privacy/" target="_blank">Privacy </a></li>
+      <li><a href="/contactus/">Contact Us</a></li>
+      <li><a href="http://www.ibibo.com/">MIH India</a></li>
+      <li><a target="_blank" href="http://www.goibibo.com/careers/">Careers</a></li>
+      <li><a href="http://blog.goibibo.com">Blog</a></li>
+      <li><a href="/mobile/">Goibibo on Mobile</a></li>
+      <li><a href="http://youtu.be/mHq4sMwrYQg">Goibibo TV Advertisement</a></li>
+      <li><a href="http://tech.goibibo.com" target="_blank">Technology@Goibibo</a></li>
+  </ul>
+
+  <ul class="footerLinks">
+      <li class="subTitle">Travel Resources</li>
+      <li><a href="/holidays/holiday-packages-india/">Holidays Packages</a></li>
+      <li><a href="/holidays/weekend-getaways/">Weekend Getaways</a></li>
+      <li><a href="/travel-guide/">Travel Guide</a></li>
+      <li><a href="/airports/india/">Airports in India</a></li>
+      <li><a href="/airports/">International Airports</a></li>
+      <li><a href="/flights/city-flights/">City Flights</a></li>
+      <li><a href="/travelFacts/">Goibibo Travel Facts</a></li>
+      <li><a href="/domestic-flights/">Domestic Flights Booking</a></li>
+      <li><a href="/flights/">Online Flight Booking</a></li>
+  </ul>
+
+  <ul class="footerLinks">
+      <li class="subTitle">More Links</li>
+      <li><a href="/offers/">Goibibo Offers</a> </li>
+      <li><a href="/airlines/indigo/">IndiGo</a></li>
+      <li><a href="/airlines/jet-airways/">Jet Airways</a></li>
+      <li><a href="/airlines/air-india/">Air India</a></li>
+      <li><a href="/airlines/goair/">GoAir</a></li>
+      <li><a href="/airlines/air-costa/">Air Costa</a></li>
+      <li><a href="/airlines/airasia/">Air Asia</a></li>
+  </ul>
+
+</div>
