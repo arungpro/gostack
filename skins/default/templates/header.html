@@ -16,7 +16,7 @@
         <form action="{% url "search" %}" method="get">
             {% csrf_token %}
             <div class="goSearchbar">
-                <input type="text" class="searchInput" value="{{ keywords }}" name="q" id="keywords" placeholder="  Serach for Q & A" />
+                <input type="text" class="searchInput" value="{{ keywords }}" name="q" id="keywords" placeholder="  Search for Q & A" />
                 <input type="submit" name="Submit" value="{% trans "search" %}" class="searchBtn" />
             </div>
         </form> 

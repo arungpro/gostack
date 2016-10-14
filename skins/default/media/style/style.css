@@ -21,6 +21,7 @@ h1, h2, h3, ul, li, form, img, p {
     border: medium none;
     margin: 0;
     padding: 0;
+    color: gray;
 }
 
 label {
@@ -185,7 +186,7 @@ blockquote blockquote {
 
 #CARight {
     float: right;
-    width: 240px;
+    width: 230px;
 }
 
 #CAFull {
@@ -351,6 +352,7 @@ blockquote blockquote {
     color: #2A5594;
     font-family: "Trebuchet MS", "segoe ui", arial, sans-serif;
     font-size: 17px;
+    font-weight: normal;
 }
 
 .short-summary .userinfo {
@@ -410,11 +412,18 @@ blockquote blockquote {
 .questions-count {
     color: #f26722;
     font-family: sans-serif;
-    font-size: 24px;
+    font-size: 14px;
     font-weight: 600;
     margin-top: 3px;
     margin-right: 5px;
     padding: 0 0 5px 0;
+}
+
+.questions-count span {
+    color: gray !important;
+    font-size:14px;
+    margin-left:5px;
+    color: gray;
 }
 
 .boxA {
@@ -448,6 +457,9 @@ blockquote blockquote {
     background: none repeat scroll 0 0 #ffffff;
     margin-bottom: 8px;
     padding: 10px;
+    width: 100%;
+    float: left;
+    margin-top: 15px;
 }
 
 .boxC p {
@@ -455,7 +467,8 @@ blockquote blockquote {
 }
 
 .boxC p.nomargin {
-    margin: 0;
+    margin-top: 5px;
+    color: gray;
 }
 
 .boxC p.info-box-follow-up-links {
@@ -2190,28 +2203,41 @@ div.provider_logo[name="myopenid"], div.provider_logo[name="yahoo"], div.provide
 }
 
 .singup-button {width: 100%;}
-.innerWrapper {
-    text-align: center;
-    background: #3069b3;
-    padding-bottom: 1em;
+
+.searchWidgetWrapper {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
 }
-.innerWrapper a li.flight {
-        background-position: 0 0;
+
+
+.ibiboPro {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    color: gray;
 }
-.innerWrapper a li.hotels {
-        background-position: 0 -74px;
+
+.logoWraper {
+    padding: 10px;
 }
-.innerWrapper a li.bus {
-        background-position: 0 -150px;
+
+.goLogo, .redbuslogo {
+    width: 100%;
+    float: left;
+    padding: 15px 0px;
+    border-bottom: 1px solid #ccc;
 }
-.innerWrapper a li {
-    background: url(../images/go_verticals_icon.png) no-repeat;
-    width: 78px;
-    height: 74px;
+
+.rydelogo {
+
+    width: 100%;
+    float: left;
+    padding: 15px 0px;
 }
-.innerWrapper {
-    text-align: center;
-    margin: 0 auto;
-    width: 300px;
-    padding: 2.5em 0 2em 0;
+
+a.gowebUrl {
+    text-align: right;
+    float: right;
+    font-size: 14px;
+    text-decoration: none;
 }
