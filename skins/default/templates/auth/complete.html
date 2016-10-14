@@ -41,26 +41,6 @@
     <div class="login signup">
         <div class="headNormal doz-user-login">Great to have you with us!</div>
 
-        <div id="bigicon_providers"  class="social_signup" style="width: 100%;margin: 0 auto;text-align: center;border-bottom: 1px solid #ccc;padding-bottom: 10px; margin-bottom: 5px;">
-            {% for provider in bigicon_providers %}
-                <div class="provider_logo big" name="{{ provider.id }}">
-                    <div class="inner">
-                        {% ifequal provider.type "DIRECT" %}
-                            <a class="provider_direct" href="{% url "auth_provider_signin" provider=provider.id %}">
-                                <img src="{% media provider.icon %}" />
-                            </a>
-                        {% endifequal %}
-                        {% ifequal provider.type "CUSTOM" %}
-                            {% include provider.code_template %}
-                        {% endifequal %}
-                        {% ifequal provider.type "SIMPLE_FORM" %}
-                            <img alt="{{ provider.simple_form_context.your_what }}" class="simple_form_provider" src="{% media provider.icon %}" />
-                        {% endifequal %}
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        <div class="width100 fl padTB10 txtCenter"><span>OR</span></div>
         <form name="fregister" action="" method="POST">
             {% csrf_token %}
             {{ form1.next }}

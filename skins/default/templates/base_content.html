@@ -3,7 +3,7 @@
 {% load i18n extra_tags extra_filters ui_registry %}
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>{% block after_head_js %}{% endblock %}
-        <title>{% block fulltitle %}{% block title %}{% endblock %} - {{ settings.APP_SHORT_NAME }}{% endblock %}</title>
+        <title>ibibostack</title>
         <meta name="description" content="{% block metadescription %}{{ settings.APP_DESCRIPTION }}{% endblock %}" />
         <meta name="keywords" content="{% block metakeywords %}{{ settings.APP_KEYWORDS }}{% endblock %}" />
         {% block meta %}{% endblock %}
@@ -98,29 +98,35 @@
             </div>
         </div>
         {% endblock %}
-        {% if settings.USE_CUSTOM_FOOTER|or_preview:request %}
-            {% ifequal settings.CUSTOM_FOOTER_MODE|or_preview:request "above" %}
-                <div id="custom_footer">
-                    {{ settings.CUSTOM_FOOTER|or_preview:request|static_content:settings.CUSTOM_FOOTER_RENDER_MODE }}
-                </div>
-            {% endifequal %}
-            <div id="ground">
-                {% ifequal settings.CUSTOM_FOOTER_MODE|or_preview:request "replace" %}
-                    {{ settings.CUSTOM_FOOTER|or_preview:request|static_content:settings.CUSTOM_FOOTER_RENDER_MODE }}
-                {% else %}
-                    {% include "footer.html" %}
+        <div id="ground">
+            {% include "footer.html" %}
+        </div>
+        {% comment %}
+            {% if settings.USE_CUSTOM_FOOTER|or_preview:request %}
+                {% ifequal settings.CUSTOM_FOOTER_MODE|or_preview:request "above" %}
+                    <div id="custom_footer">
+                        {{ settings.CUSTOM_FOOTER|or_preview:request|static_content:settings.CUSTOM_FOOTER_RENDER_MODE }}
+                    </div>
                 {% endifequal %}
-            </div>
-            {% ifequal settings.CUSTOM_FOOTER_MODE|or_preview:request "below" %}
-                <div id="custom_footer">
-                    {{ settings.CUSTOM_FOOTER|or_preview:request|static_content:settings.CUSTOM_FOOTER_RENDER_MODE }}
+                <div id="ground">
+                    {% ifequal settings.CUSTOM_FOOTER_MODE|or_preview:request "replace" %}
+                        {{ settings.CUSTOM_FOOTER|or_preview:request|static_content:settings.CUSTOM_FOOTER_RENDER_MODE }}
+                    {% else %}
+                        {% include "footer.html" %}
+                    {% endifequal %}
                 </div>
-            {% endifequal %}
-        {% else %}
-            <div id="ground">
-                {% include "footer.html" %}
-            </div>
-        {% endif %}
+                {% ifequal settings.CUSTOM_FOOTER_MODE|or_preview:request "below" %}
+                    <div id="custom_footer">
+                        {{ settings.CUSTOM_FOOTER|or_preview:request|static_content:settings.CUSTOM_FOOTER_RENDER_MODE }}
+                    </div>
+                {% endifequal %}
+            {% else %}
+                <div id="ground">
+                    {% include "footer.html" %}
+                </div>
+            {% endif %}
+        {% endcomment %}
+
         {% block endjs %}
         {% endblock %}
         {% if settings.GOOGLE_ANALYTICS_KEY %}
