@@ -2190,3 +2190,28 @@ div.provider_logo[name="myopenid"], div.provider_logo[name="yahoo"], div.provide
 }
 
 .singup-button {width: 100%;}
+.innerWrapper {
+    text-align: center;
+    background: #3069b3;
+    padding-bottom: 1em;
+}
+.innerWrapper a li.flight {
+        background-position: 0 0;
+}
+.innerWrapper a li.hotels {
+        background-position: 0 -74px;
+}
+.innerWrapper a li.bus {
+        background-position: 0 -150px;
+}
+.innerWrapper a li {
+    background: url(../images/go_verticals_icon.png) no-repeat;
+    width: 78px;
+    height: 74px;
+}
+.innerWrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    padding: 2.5em 0 2em 0;
+}
